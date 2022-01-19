@@ -32,13 +32,13 @@ public class HistoricoController implements HistoricoDefinition {
 	@GetMapping
 	@ResponseStatus(HttpStatus.CREATED) 
 	public @ResponseBody ResponseEntity<Collection<Historico>> listarHistorico(){
-		return ok(service.findAll());
+		return ok(service.listarHistorico());
 	}
 	
 	@PostMapping()
 	@ResponseStatus(HttpStatus.CREATED) 
 	public ResponseEntity<HistoricoResponse> cadastraHistorico(@RequestBody @Valid HistoricoRequest request) {
-		return ok(service.create(request));
+		return ok(service.cadastraHistorico(request));
 	}
 	
 }

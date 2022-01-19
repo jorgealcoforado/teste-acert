@@ -21,7 +21,7 @@ import io.swagger.annotations.ApiResponses;
 @Api(value = "/historico", produces = "application/json", tags = { "Histórico" }, description = "Operações para calcular temperatura")
 public interface HistoricoDefinition {
 
-	@ApiOperation(value = "enviarDocumento", notes = "Realiza o upload do documento", code = 200 ,response = Historico.class)
+	@ApiOperation(value = "listarHistorico", notes = "Realiza a consulta do documento", code = 200 ,response = Historico.class)
     @ApiResponses({
             @ApiResponse(code = 400, message = MENSAGEM_GLOBAL_400, response = ErroInfo.class),
             @ApiResponse(code = 404, message = MENSAGEM_GLOBAL_404, response = ErroInfo.class),
@@ -29,7 +29,7 @@ public interface HistoricoDefinition {
     })
 	ResponseEntity<Collection<Historico>> listarHistorico();
 	
-	@ApiOperation(value = "enviarDocumento", notes = "Realiza o upload do documento", code = 201 ,response = HistoricoResponse.class)
+	@ApiOperation(value = "cadastraHistorico", notes = "Realiza o cálculo de conversão da temperatura e o cadastro do histórico", code = 201 ,response = HistoricoResponse.class)
     @ApiResponses({
             @ApiResponse(code = 400, message = MENSAGEM_GLOBAL_400, response = ErroInfo.class),
             @ApiResponse(code = 404, message = MENSAGEM_GLOBAL_404, response = ErroInfo.class),

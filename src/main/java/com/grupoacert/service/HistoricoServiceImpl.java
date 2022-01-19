@@ -19,12 +19,12 @@ public class HistoricoServiceImpl implements HistoricoService {
 	private HistoricoRepository repository;
 	
 	@Override
-	public List<Historico> findAll() {
+	public List<Historico> listarHistorico() {
 		return repository.findAll();
 	}
 
 	@Override
-	public HistoricoResponse create(HistoricoRequest request) {
+	public HistoricoResponse cadastraHistorico(HistoricoRequest request) {
 		
 		HistoricoResponse response;
 		

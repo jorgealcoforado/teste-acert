@@ -8,8 +8,8 @@ import com.grupoacert.model.response.HistoricoResponse;
 
 public interface HistoricoService {
 
-	List<Historico> findAll();
+	List<Historico> listarHistorico();
 	
-	HistoricoResponse create(HistoricoRequest historico);
+	HistoricoResponse cadastraHistorico(HistoricoRequest historico);
 	
 }
